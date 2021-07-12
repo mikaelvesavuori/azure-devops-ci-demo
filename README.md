@@ -39,17 +39,17 @@ Then send a payload:
 POST https://dev.azure.com/YOUR_USER/YOUR_PROJECT/_apis/pipelines/DEFINITION_NUMBER/runs?api-version=6.0-preview.1
 
 {
-	"resources": {
-		"repositories": {
-			"self": {
-				"refName": "refs/heads/main"
-			}
-		}
-	},
-	"templateParameters": {
-		"FIGMA_VERSION": "something-here-alright",
-		"FIGMA_MESSAGE": "This is what happened"
-	}
+  "resources": {
+    "repositories": {
+      "self": {
+        "refName": "refs/heads/main"
+      }
+    }
+  },
+  "templateParameters": {
+    "FIGMA_VERSION": "something-here-alright",
+    "FIGMA_MESSAGE": "This is what happened"
+  }
 }
 ```
 
