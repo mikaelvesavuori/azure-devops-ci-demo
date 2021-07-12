@@ -1,0 +1,29 @@
+parameters:
+  - name: FIGMA_MESSAGE
+    type: string
+    default: "No message set"
+  - name: FIGMA_VERSION
+    type: string
+    default: "latest"
+
+trigger:
+  branches:
+    include:
+      - "*"
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+
+  - script: |
+      echo "MESSAGE ---> '${{ parameters.FIGMA_MESSAGE }}'"
+      echo "VERSION ---> '${{ parameters.FIGMA_VERSION }}'"
+      npm install -D figmagic
+      npx figmagic --token=$(FIGMA_TOKEN) --url=$(FIGMA_URL) --versionName=$(FIGMA_VERSION)
+    env:
+      FIGMA_TOKEN: $(FigmaToken)
+      FIGMA_URL: $(FigmaUrl)

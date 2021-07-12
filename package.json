@@ -1,0 +1,20 @@
+{
+  "name": "azure-devops-ci-demo",
+  "version": "1.0.0",
+  "description": "This is a basic demonstration of what is needed to run a Azure DevOps CI build by calling their REST API.",
+  "main": "index.js",
+  "keywords": [
+    "ci",
+    "ci-cd",
+    "azure",
+    "azure-devops",
+    "azure-pipelines",
+    "ci-demo",
+    "figmagic"
+  ],
+  "author": "Mikael Vesavuori",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
